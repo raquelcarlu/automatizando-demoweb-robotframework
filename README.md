@@ -1,6 +1,9 @@
 # Automatizando um site com Robot Framework
 Projeto que aplica Robot Framework na criação de testes automatizados do projeto demo Web da Sauce Labs.
 
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+
+
 ## Demo - Sauce Labs
 > Automatizando testes no site de treinamento da Sauce Labs (especializada em Device Farm e Cross Browser na nuvem)
 > Apresenta o diferencial de simular vários perfis distintos
