@@ -18,28 +18,26 @@ Abrir navegador
 
 Fim de um teste
     [Arguments]    ${FILENAME_INDEX}
-    Sleep    200ms
+    Sleep    100ms
     Capture Page Screenshot    filename=cenario-${FILENAME_INDEX}.png
 
 Abrir tela "Your Cart"
-    Click Element    //a[@class='shopping_cart_link'][contains(.,'1')]
+    Click Element    id:shopping_cart_container
 
 Verificar se está na tela de produtos
     Wait Until Page Contains    text=${PRODUCTS}
     # Set Test Variable    ${TELA_ATUAL}    tela_produtos
 
 Verificar se está na tela de detalhes do produto "${PRODUTO}"
-    Sleep    200ms
+    Sleep    90ms
     Page Should Contain    text=${PRODUTO}
     Element Should Be Visible    (//div[contains(.,'${PRODUTO}')])[8]
 
 Entrar na tela de detalhes do produto "${PRODUTO}"
     Click Element    //div[@class='inventory_item_name '][contains(.,'${PRODUTO}')]
-    Sleep    200ms
 
 Voltar para tela de produtos
-    Click Element    alt:Open Menu
-    Click Element    id:inventory_sidebar_link
+    Click Button    id:continue-shopping
     Verificar se está na tela de produtos
 
 # KEYWORDS BDD
@@ -83,7 +81,8 @@ Então sou redirecionado para a tela de produtos
     Fim de um teste    03
 
 Dado que estou na tela de detalhes do produto "Sauce Labs Backpack"
-    Element Should Be Visible    (//div[contains(.,'Sauce Labs Backpack')])[8]
+    Entrar na tela de detalhes do produto "Sauce Labs Backpack"
+    Verificar se está na tela de detalhes do produto "Sauce Labs Backpack"
 
 Quando clico sobre o botão "Add to cart"
     Click Button    id:add-to-cart-sauce-labs-backpack
@@ -92,3 +91,33 @@ Então o respectivo produto é adicionado ao carrinho
     Abrir tela "Your Cart"
     Wait Until Page Contains    text=Sauce Labs Backpack
     Fim de um teste    04
+    Voltar para tela de produtos
+    
+E este mesmo produto foi adicionado no carrinho
+    Abrir tela "Your Cart"
+    Wait Until Page Contains    text=Sauce Labs Backpack
+    Click Element    //div[@class='inventory_item_name'][contains(.,'Sauce Labs Backpack')]
+    
+E o botão "Remove" está disponível
+    Wait Until Element Is Visible    id:remove-sauce-labs-backpack
+    
+Quando clico sobre o botão "Remove"
+    Click Button    id:remove-sauce-labs-backpack
+
+O respectivo produto é excluído do carrinho
+    Abrir tela "Your Cart"
+    Page Should Not Contain    text=Sauce Labs Backpack
+    Fim de um teste    05
+    Voltar para tela de produtos
+
+Dado que estou na tela de produtos
+    Verificar se está na tela de produtos
+
+Quando clico no ícone de carrinho
+    Abrir tela "Your Cart"
+
+Então sou redirecionado para a tela de detalhes do carrinho
+    Page Should Contain    text=Description
+    Page Should Contain    text=QTY
+    Fim de um teste    06
+    Voltar para tela de produtos

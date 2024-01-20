@@ -24,17 +24,17 @@ Cenário 04: Adicionar produto desde a tela de detalhes do produto
     Quando clico sobre o botão "Add to cart"
     Então o respectivo produto é adicionado ao carrinho
 
-# Cenário 05: Remover produto do carrinho
-#     Dado que estou na tela de detalhes de um produto
-#     E este mesmo produto foi adicionado no carrinho
-#     E o botão "Remove" está disponível
-#     Quando clico sobre o botão "Remove"
-#     O respectivo produto é excluído do carrinho
+Cenário 05: Remover produto do carrinho
+    Dado que estou na tela de detalhes do produto "Sauce Labs Backpack"
+    E este mesmo produto foi adicionado no carrinho
+    E o botão "Remove" está disponível
+    Quando clico sobre o botão "Remove"
+    O respectivo produto é excluído do carrinho
 
-# Cenário 06: Entrar na tela de detalhes do carrinho desde a tela de produtos
-#     Dado que estou na tela de produtos
-#     Quando clico no ícone de carrinho
-#     Então sou redirecionado para a tela de detalhes do carrinho
+Cenário 06: Entrar na tela de detalhes do carrinho desde a tela de produtos
+    Dado que estou na tela de produtos
+    Quando clico no ícone de carrinho
+    Então sou redirecionado para a tela de detalhes do carrinho
 
 # Cenário 07: Entrar na tela de detalhes do carrinho desde a tela de detalhes do produto
 #     Dado que estou na tela de detalhes de um produto
