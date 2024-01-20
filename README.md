@@ -1,5 +1,5 @@
-# Automatizando uma API Rest com Robot Framework
-Projeto que aplica Robot Framework na criação de testes automatizados do projeto ServeRest.
+# Automatizando um site com Robot Framework
+Projeto que aplica Robot Framework na criação de testes automatizados do projeto demo Web da Sauce Labs.
 
 ## Demo - Sauce Labs
 > Automatizando testes no site de treinamento da Sauce Labs (especializada em Device Farm e Cross Browser na nuvem)
@@ -14,5 +14,5 @@ Projeto que aplica Robot Framework na criação de testes automatizados do proje
 ## Execução dos testes
 Executar no terminal:  
 ```sh
-robot -d ./MeusResultados store_webtesting_tests.robot
+robot -d ./results store_webtesting_tests.robot
 ```

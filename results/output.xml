@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-01-20T12:11:34.835501" rpa="false" schemaversion="5">
+<suite id="s1" name="Store Webtesting Tests" source="C:\RobotFrameworkProjetos\automatizando-demoweb-robotframework\tests\store_webtesting_tests.robot">
+<test id="s1-t1" name="Cenário 01: Entrar na aplicação com o usuário standard" line="5">
+<kw name="Dado que estou na tela de login" owner="store_webtesting_resources">
+<kw name="Abrir navegador" owner="store_webtesting_resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:35.140090" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-20T12:11:35.140090" elapsed="2.023643"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-20T12:11:37.163733" elapsed="0.122171"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:35.140090" elapsed="2.145814"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:37.286305" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-01-20T12:11:37.286305" elapsed="0.592552"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:login-button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-20T12:11:37.878857" elapsed="0.028641"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:35.140090" elapsed="2.767408"/>
+</kw>
+<kw name="Quando entro o username do usuário standard" owner="store_webtesting_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:37.907498" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>text=${STANDARD_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-20T12:11:37.907498" elapsed="0.166694"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:37.907498" elapsed="0.166694"/>
+</kw>
+<kw name="E entro a senha do usuário standard" owner="store_webtesting_resources">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:38.074192" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-01-20T12:11:38.124232" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>password=${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-20T12:11:38.074192" elapsed="0.128672"/>
+</kw>
+<kw name="Fim de um teste" owner="store_webtesting_resources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-20T12:11:38.404420" level="INFO">Slept 200 milliseconds.</msg>
+<arg>200ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-20T12:11:38.203862" elapsed="0.200558"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:38.526021" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cenario-00.png"&gt;&lt;img src="cenario-00.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>filename=cenario-${FILENAME_INDEX}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-01-20T12:11:38.404420" elapsed="0.121601"/>
+</kw>
+<arg>00</arg>
+<status status="PASS" start="2024-01-20T12:11:38.202864" elapsed="0.323157"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:38.074192" elapsed="0.451829"/>
+</kw>
+<kw name="E clico sobre o botão &quot;Login&quot;" owner="store_webtesting_resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:38.526021" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-20T12:11:38.526021" elapsed="0.134442"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:38.526021" elapsed="0.134442"/>
+</kw>
+<kw name="Então acesso a tela principal da aplicação" owner="store_webtesting_resources">
+<kw name="Verificar se está na tela de produtos" owner="store_webtesting_resources">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>text=${PRODUCTS}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-20T12:11:38.662463" elapsed="0.035681"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:38.662463" elapsed="0.036681"/>
+</kw>
+<kw name="Fim de um teste" owner="store_webtesting_resources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-20T12:11:38.900483" level="INFO">Slept 200 milliseconds.</msg>
+<arg>200ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-20T12:11:38.699529" elapsed="0.200954"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:39.049936" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cenario-01.png"&gt;&lt;img src="cenario-01.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>filename=cenario-${FILENAME_INDEX}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-01-20T12:11:38.900483" elapsed="0.149453"/>
+</kw>
+<arg>01</arg>
+<status status="PASS" start="2024-01-20T12:11:38.699529" elapsed="0.350407"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:38.661462" elapsed="0.388474"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:35.140090" elapsed="3.910851"/>
+</test>
+<test id="s1-t2" name="Cenário 02: Entrar na tela de detalhes de um produto" line="12">
+<kw name="Dado que estou na tela principal da aplicação" owner="store_webtesting_resources">
+<kw name="Verificar se está na tela de produtos" owner="store_webtesting_resources">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>text=${PRODUCTS}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-20T12:11:39.054096" elapsed="0.009010"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:39.054096" elapsed="0.009010"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:39.053857" elapsed="0.009249"/>
+</kw>
+<kw name="Quando clico sobre o nome do produto &quot;Sauce Labs Fleece Jacket&quot;" owner="store_webtesting_resources">
+<kw name="Entrar na tela de detalhes do produto &quot;Sauce Labs Fleece Jacket&quot;" owner="store_webtesting_resources" source_name="Entrar na tela de detalhes do produto &quot;${PRODUTO}&quot;">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:39.064096" level="INFO">Clicking element '//div[@class='inventory_item_name '][contains(.,'Sauce Labs Fleece Jacket')]'.</msg>
+<arg>//div[@class='inventory_item_name '][contains(.,'${PRODUTO}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-20T12:11:39.064096" elapsed="0.078048"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-20T12:11:39.343668" level="INFO">Slept 200 milliseconds.</msg>
+<arg>200ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-20T12:11:39.143146" elapsed="0.200522"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:39.064096" elapsed="0.279572"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:39.063106" elapsed="0.280562"/>
+</kw>
+<kw name="Então sou redirecionado para a tela de detalhes do respectivo produto" owner="store_webtesting_resources">
+<kw name="Verificar se está na tela de detalhes do produto &quot;Sauce Labs Fleece Jacket&quot;" owner="store_webtesting_resources" source_name="Verificar se está na tela de detalhes do produto &quot;${PRODUTO}&quot;">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-20T12:11:39.544143" level="INFO">Slept 200 milliseconds.</msg>
+<arg>200ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-20T12:11:39.343668" elapsed="0.200475"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:39.564770" level="INFO">Current page contains text 'Sauce Labs Fleece Jacket'.</msg>
+<arg>text=${PRODUTO}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-01-20T12:11:39.544143" elapsed="0.021641"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:39.591858" level="INFO">Element '(//div[contains(.,'Sauce Labs Fleece Jacket')])[8]' is displayed.</msg>
+<arg>(//div[contains(.,'${PRODUTO}')])[8]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-20T12:11:39.565784" elapsed="0.026074"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:39.343668" elapsed="0.248190"/>
+</kw>
+<kw name="Fim de um teste" owner="store_webtesting_resources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-20T12:11:39.793450" level="INFO">Slept 200 milliseconds.</msg>
+<arg>200ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-20T12:11:39.592857" elapsed="0.200593"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:39.951628" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cenario-02.png"&gt;&lt;img src="cenario-02.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>filename=cenario-${FILENAME_INDEX}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-01-20T12:11:39.793450" elapsed="0.158178"/>
+</kw>
+<arg>02</arg>
+<status status="PASS" start="2024-01-20T12:11:39.591858" elapsed="0.359770"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:39.343668" elapsed="0.607960"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:39.051939" elapsed="0.899689"/>
+</test>
+<test id="s1-t3" name="Cenário 03: Retornar para a página de produtos" line="17">
+<kw name="Dado que estou na tela de detalhes do produto &quot;Sauce Labs Fleece Jacket&quot;" owner="store_webtesting_resources">
+<kw name="Verificar se está na tela de detalhes do produto &quot;Sauce Labs Fleece Jacket&quot;" owner="store_webtesting_resources" source_name="Verificar se está na tela de detalhes do produto &quot;${PRODUTO}&quot;">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-20T12:11:40.152218" level="INFO">Slept 200 milliseconds.</msg>
+<arg>200ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-20T12:11:39.951628" elapsed="0.200590"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:40.167854" level="INFO">Current page contains text 'Sauce Labs Fleece Jacket'.</msg>
+<arg>text=${PRODUTO}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-01-20T12:11:40.152218" elapsed="0.015636"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:40.185494" level="INFO">Element '(//div[contains(.,'Sauce Labs Fleece Jacket')])[8]' is displayed.</msg>
+<arg>(//div[contains(.,'${PRODUTO}')])[8]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-20T12:11:40.167854" elapsed="0.017640"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:39.951628" elapsed="0.233866"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:39.951628" elapsed="0.233866"/>
+</kw>
+<kw name="Quando clico sobre o botão &quot;Back to products&quot;" owner="store_webtesting_resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:40.185494" level="INFO">Clicking button 'id:back-to-products'.</msg>
+<arg>id:back-to-products</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-20T12:11:40.185494" elapsed="0.091975"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:40.185494" elapsed="0.091975"/>
+</kw>
+<kw name="Então sou redirecionado para a tela de produtos" owner="store_webtesting_resources">
+<kw name="Então acesso a tela principal da aplicação" owner="store_webtesting_resources">
+<kw name="Verificar se está na tela de produtos" owner="store_webtesting_resources">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>text=${PRODUCTS}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-20T12:11:40.279468" elapsed="0.009000"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:40.279468" elapsed="0.009000"/>
+</kw>
+<kw name="Fim de um teste" owner="store_webtesting_resources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-20T12:11:40.490255" level="INFO">Slept 200 milliseconds.</msg>
+<arg>200ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-20T12:11:40.289470" elapsed="0.200785"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:40.635003" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cenario-01.png"&gt;&lt;img src="cenario-01.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>filename=cenario-${FILENAME_INDEX}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-01-20T12:11:40.490255" elapsed="0.144748"/>
+</kw>
+<arg>01</arg>
+<status status="PASS" start="2024-01-20T12:11:40.289470" elapsed="0.345533"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:40.278469" elapsed="0.356534"/>
+</kw>
+<kw name="Fim de um teste" owner="store_webtesting_resources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-20T12:11:40.836167" level="INFO">Slept 200 milliseconds.</msg>
+<arg>200ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-20T12:11:40.635003" elapsed="0.201164"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:40.977908" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cenario-03.png"&gt;&lt;img src="cenario-03.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>filename=cenario-${FILENAME_INDEX}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-01-20T12:11:40.836167" elapsed="0.141741"/>
+</kw>
+<arg>03</arg>
+<status status="PASS" start="2024-01-20T12:11:40.635003" elapsed="0.342905"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:40.278469" elapsed="0.699439"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:39.951628" elapsed="1.026280"/>
+</test>
+<test id="s1-t4" name="Cenário 04: Adicionar produto desde a tela de detalhes do produto" line="22">
+<kw name="Dado que estou na tela de detalhes do produto &quot;Sauce Labs Backpack&quot;" owner="store_webtesting_resources">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:41.004134" level="INFO">Element '(//div[contains(.,'Sauce Labs Backpack')])[8]' is displayed.</msg>
+<arg>(//div[contains(.,'Sauce Labs Backpack')])[8]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-20T12:11:40.977908" elapsed="0.026226"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:40.977908" elapsed="0.026226"/>
+</kw>
+<kw name="Quando clico sobre o botão &quot;Add to cart&quot;" owner="store_webtesting_resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:41.004134" level="INFO">Clicking button 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-20T12:11:41.004134" elapsed="0.079274"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:41.004134" elapsed="0.079274"/>
+</kw>
+<kw name="Então o respectivo produto é adicionado ao carrinho" owner="store_webtesting_resources">
+<kw name="Abrir tela &quot;Your Cart&quot;" owner="store_webtesting_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:41.086516" level="INFO">Clicking element '//a[@class='shopping_cart_link'][contains(.,'1')]'.</msg>
+<arg>//a[@class='shopping_cart_link'][contains(.,'1')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-20T12:11:41.086516" elapsed="0.059338"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:41.085523" elapsed="0.060331"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>text=Sauce Labs Backpack</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-20T12:11:41.145854" elapsed="0.015315"/>
+</kw>
+<kw name="Fim de um teste" owner="store_webtesting_resources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-20T12:11:41.362322" level="INFO">Slept 200 milliseconds.</msg>
+<arg>200ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-20T12:11:41.162169" elapsed="0.200153"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-01-20T12:11:41.467377" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cenario-04.png"&gt;&lt;img src="cenario-04.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>filename=cenario-${FILENAME_INDEX}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-01-20T12:11:41.362322" elapsed="0.105055"/>
+</kw>
+<arg>04</arg>
+<status status="PASS" start="2024-01-20T12:11:41.161169" elapsed="0.306208"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:41.083408" elapsed="0.383969"/>
+</kw>
+<status status="PASS" start="2024-01-20T12:11:40.977908" elapsed="0.489469"/>
+</test>
+<status status="PASS" start="2024-01-20T12:11:34.851133" elapsed="6.616244"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Store Webtesting Tests">Store Webtesting Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

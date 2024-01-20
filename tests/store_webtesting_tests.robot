@@ -9,20 +9,20 @@ Cenário 01: Entrar na aplicação com o usuário standard
     E clico sobre o botão "Login"
     Então acesso a tela principal da aplicação
     
-# Cenário 02: Entrar na tela de detalhes de um produto
-#     Dado que estou na tela principal da aplicação
-#     Quando clico sobre o nome de um produto
-#     Então sou redirecionado para a tela de detalhes do respectivo produto
+Cenário 02: Entrar na tela de detalhes de um produto
+    Dado que estou na tela principal da aplicação
+    Quando clico sobre o nome do produto "Sauce Labs Fleece Jacket"
+    Então sou redirecionado para a tela de detalhes do respectivo produto
 
-# Cenário 03: Retornar para a página de produtos
-#     Dado que estou na tela de detalhes de um produto
-#     Quando clico sobre o botão "Back to products"
-#     Então sou redirecionado para a tela de produtos
+Cenário 03: Retornar para a página de produtos
+    Dado que estou na tela de detalhes do produto "Sauce Labs Fleece Jacket"
+    Quando clico sobre o botão "Back to products"
+    Então sou redirecionado para a tela de produtos
 
-# Cenário 04: Adicionar produto desde a tela de detalhes do produto
-#     Dado que estou na tela de detalhes de um produto
-#     Quando clico sobre o botão "Add to cart"
-#     Então o respectivo produto é adicionado uma vez ao carrinho
+Cenário 04: Adicionar produto desde a tela de detalhes do produto 
+    Dado que estou na tela de detalhes do produto "Sauce Labs Backpack"
+    Quando clico sobre o botão "Add to cart"
+    Então o respectivo produto é adicionado ao carrinho
 
 # Cenário 05: Remover produto do carrinho
 #     Dado que estou na tela de detalhes de um produto
