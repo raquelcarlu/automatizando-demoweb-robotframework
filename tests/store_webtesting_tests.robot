@@ -36,22 +36,23 @@ Cenário 06: Entrar na tela de detalhes do carrinho desde a tela de produtos
     Quando clico no ícone de carrinho
     Então sou redirecionado para a tela de detalhes do carrinho
 
-# Cenário 07: Entrar na tela de detalhes do carrinho desde a tela de detalhes do produto
-#     Dado que estou na tela de detalhes de um produto
-#     Quando clico no ícone de carrinho
-#     Então sou redirecionado para a tela de detalhes do carrinho
+Cenário 07: Entrar na tela de detalhes do carrinho desde a tela de detalhes do produto
+    Dado que estou na tela de detalhes do produto "Sauce Labs Bike Light"
+    Quando clico no ícone de carrinho
+    Então sou redirecionado para a tela de detalhes do carrinho
 
-# Cenário 08: Remover produtos do carrinho
-#     Dado que estou na tela de detalhes do carrinho
-#     E possui um ou mais produtos adicionados no carrinho
-#     Quando clico no botão "Remove" ao lado de um dos produtos
-#     Então o respectivo produto é excluído do carrinho
+Cenário 08: Remover produtos do carrinho
+    Dado que dois produtos foram adicionados no carrinho
+    E estou na tela de detalhes do carrinho
+    E ambos os produtos estão presentes no carrinho
+    Quando clico no botão "Remove" ao lado de um dos produtos
+    Então o respectivo produto é excluído do carrinho
 
-# Cenário 09: Concluir compra
-#     Dado que estou na tela de detalhes do carrinho
-#     E possui um ou mais produtos adicionados no carrinho
-#     Quando cliclo "Checkout"
-#     E preencho os dados exigidos na tela "Your Information"
-#     E clico em "Continue"
-#     E clico em "Finish" na tela "Checkout: Overview"
-#     Então o pedido é completo e sou redirecionado para a tela de agradecimento
+Cenário 09: Concluir compra
+    Dado que estou na tela de detalhes do carrinho
+    E possui o produto "Sauce Labs Bolt T-Shirt" no carrinho
+    Quando clico no botão "Checkout"
+    E preencho os dados exigidos na tela "Your Information"
+    E clico no botão "Continue"
+    E clico no botão "Finish" na tela "Checkout: Overview"
+    Então o pedido é completo e sou redirecionado para a tela de agradecimento
