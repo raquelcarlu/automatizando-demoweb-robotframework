@@ -1,16 +1,14 @@
 *** Settings ***
-Resource    ../resources/store_webtesting_resources.robot
+Resource            ../resources/resources.robot
+Suite Setup         Logar com usuário standard
+Test Teardown       Captura evidência
+Suite Teardown      Fechar navegador
 
 *** Test Cases ***
-Cenário 01: Entrar na aplicação com o usuário standard
-    Dado que estou na tela de login
-    Quando entro o username do usuário standard
-    E entro a senha do usuário standard
-    E clico sobre o botão "Login"
-    Então acesso a tela principal da aplicação
+# Cenário 01: 
     
 Cenário 02: Entrar na tela de detalhes de um produto
-    Dado que estou na tela principal da aplicação
+    Dado que estou na tela de produtos
     Quando clico sobre o nome do produto "Sauce Labs Fleece Jacket"
     Então sou redirecionado para a tela de detalhes do respectivo produto
 
